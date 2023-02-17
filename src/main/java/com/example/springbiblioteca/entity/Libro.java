@@ -1,9 +1,7 @@
 package com.example.springbiblioteca.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
+
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -13,7 +11,7 @@ public class Libro {
     private Long isbn;
     private String titulo;
     private Integer ejemplares;
-    @Temporal(javax.persistence.TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     private Date alta;
 
     @ManyToOne
